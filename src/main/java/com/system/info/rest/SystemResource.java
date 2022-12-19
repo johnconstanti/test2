@@ -63,6 +63,7 @@ private static Logger logger = Logger.getLogger(SystemResource.class.getName());
  @RolesAllowed({ "admin" })
  // end::rolesAllowedAdmin[]
  public String getOS() {
+	 logger.info("user info retrieved : "+System.getProperties().getProperty("user.name"));
      return System.getProperties().getProperty("os.name");
  }
 
